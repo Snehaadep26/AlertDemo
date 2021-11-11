@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_column="3"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/billTextView"
+        android:layout_width="160dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="36dp"
+        android:text="Enter Bill Amount"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/percentTextView"
+        android:layout_width="74dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="60dp"
+        android:text="Percent"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/billTextView" />
+
+    <EditText
+        android:id="@+id/enterBillText"
+        android:layout_width="181dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="36dp"
+        android:hint="Enter bill amount"
+        android:inputType="numberDecimal"
+        app:layout_constraintStart_toEndOf="@+id/billTextView"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/perCalTextView"
+        android:layout_width="64dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="60dp"
+        app:layout_constraintStart_toEndOf="@+id/percentTextView"
+        app:layout_constraintTop_toBottomOf="@+id/billTextView"
+        tools:text="15%" />
+
+    <TextView
+        android:id="@+id/totalLabelTextView"
+        android:layout_width="68dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="124dp"
+        android:text="Total"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/percentTextView" />
+
+    <TextView
+        android:id="@+id/totalCalTextView"
+        android:layout_width="62dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="120dp"
+        app:layout_constraintStart_toEndOf="@+id/totalLabelTextView"
+        app:layout_constraintTop_toBottomOf="@+id/percentTextView"
+        tools:text="$0.00" />
+
+    <Button
+        android:id="@+id/addButton"
+        android:layout_width="62dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="32dp"
+        android:onClick="addButton"
+        android:text="+"
+        app:layout_constraintStart_toEndOf="@+id/perCalTextView"
+        app:layout_constraintTop_toBottomOf="@+id/enterBillText" />
+
+    <Button
+        android:id="@+id/subButton"
+        android:layout_width="55dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="28dp"
+        android:onClick="subButton"
+        android:text="-"
+        app:layout_constraintStart_toEndOf="@+id/addButton"
+        app:layout_constraintTop_toBottomOf="@+id/enterBillText"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <TextView
+        android:id="@+id/tipTextView"
+        android:layout_width="65dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:text="TextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/percentTextView" />
+
+    <TextView
+        android:id="@+id/tipCalTextView"
+        android:layout_width="64dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintStart_toEndOf="@+id/tipTextView"
+        app:layout_constraintTop_toBottomOf="@+id/perCalTextView"
+        tools:text="$0.00" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
